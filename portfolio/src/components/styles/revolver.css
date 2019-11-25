@@ -1,0 +1,53 @@
+.revolver-container {
+    margin: auto;
+    margin-top: 10vh;
+    background-color: rgba(0, 0, 0, 0.24);
+    width: 70vh;
+    height: 70vh;
+    border-radius: 100%;
+    max-width: 70%;
+    max-height: 70vw;
+    -webkit-shape-outside: circle();    
+    border: 10px solid rgba(128, 128, 128, 0.075);
+    shape-outside: circle();
+}
+
+.animation-rotate {
+    -webkit-animation: revolver 20s linear infinite;
+    animation: revolver 20s linear infinite;
+}
+
+@-webkit-keyframes revolver {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+  
+@keyframes revolver {
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    }
+}
+
+.animation-rotate:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+     animation-play-state: paused;
+}
+
+.option-element {
+    background: rgb(255, 255, 255);
+    width: 20%;
+    height: 20%;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.option-container {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
