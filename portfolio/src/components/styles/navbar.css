@@ -1,0 +1,16 @@
+.navbar {
+    height: 100%;
+    width: 18%;
+    top: 20px;
+    position: static;
+    float: left;
+    text-align: center;
+}
+
+@media only screen and (max-width: 450px) {
+    .navbar {
+        height: 40%;
+        width: 100%;
+        float: none;
+    }
+}

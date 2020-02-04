@@ -1,0 +1,21 @@
+.homepage {
+    position: relative;
+    width: 82%;
+    height: 100%;
+    background: rgb(248, 246, 246);
+    text-align: center;
+    margin: 0px;
+    margin-left: 18%;
+    font-size: 120px;
+    /* font-family: 'Times New Roman', Times, serif; */
+}
+
+.johnmarshall {
+    position: absolute;
+    font-size: 120px;
+    color: black;
+    top: 10%;
+    right: 0%;
+    text-shadow: 5px 0px white;
+    float: right;
+}
