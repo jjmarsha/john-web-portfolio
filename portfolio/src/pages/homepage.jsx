@@ -1,24 +1,22 @@
 import React from "react";
-import "../components/styles/homepage.css";
+import "./homepage.css";
 import ReactTypingEffect from "react-typing-effect";
+import Page from "./page";
 
 const name = "John Marshall";
 
 export default class Homepage extends React.Component {
-    componentDidMount() {
-    }
     render() {
         return(
-            <div className="homepage">
-                <div className="johnmarshall">
-                    <ReactTypingEffect
-                        text="John Marshall"
-                        cursor="|"
-                        speed={100}
-                        eraseDelay={10000}
-                    />
+            <Page>
+                <div style={{
+                    fontSize: "40px",
+                    color: "rgb(54, 54, 54)",
+                    marginTop: "15%",
+                }}>
+                    Page Coming Soon
                 </div>
-            </div>
+            </Page>
         )
     }
 }

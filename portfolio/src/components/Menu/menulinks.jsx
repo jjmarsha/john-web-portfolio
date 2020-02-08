@@ -1,10 +1,16 @@
 import React from "react";
-import "../styles/menulink.css";
+import "./menulink.css";
+import {NavLink} from "react-router-dom";
+
+const linkStyle = {
+    textDecoration: "none",
+    color: "black"
+}
 
 const MenuLink = (props) => {
     return(
         <div className={"menulink" + (props.active ? " active" : "")}>
-            {props.name}
+            <NavLink style={linkStyle} to={props.link}>{props.name}</NavLink>
         </div>
     )
 }

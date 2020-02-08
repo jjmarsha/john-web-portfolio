@@ -1,0 +1,166 @@
+.bar {
+    position: absolute;
+}
+
+.ancestor {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.horizontal {
+    margin-top: calc(1% + 100px);
+    border: 1px solid;
+    float: right;
+    animation-name: horizontal-reveal;
+    animation-duration: 1s;
+}
+
+
+.left {
+    width: 70%;
+    border-image: linear-gradient(90deg,  rgb(54, 54, 54), white) 100 1;
+}
+
+.right {
+    width: 10%;
+    margin-left: 90%;
+    float: right;
+    border-image: linear-gradient(-90deg, grey, white) 100 1;
+}
+
+.vertical {
+    margin-left: calc(1% + 100px);
+    height: 800px;
+    border-right: 2px solid;
+    animation-name: horizontal-reveal;
+    animation-duration: 2s;
+    border-image: linear-gradient(-45deg, white, grey) 1 1;
+}
+
+@keyframes horizontal-reveal {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes logo-reveal {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logo-reveal-t1 {
+    0% {
+        opacity: 0%;
+    }
+    40% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logo-reveal-t2 {
+    0% {
+        opacity: 0%;
+    }
+    30% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logo-reveal-t3 {
+    0% {
+        opacity: 0%;
+    }
+    20% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logo-reveal-t4 {
+    0% {
+        opacity: 0%;
+    }
+    10% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.logo {
+    position: absolute;
+    margin-top: 1%;
+    margin-left: 1%;
+    z-index: 1;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 50%;
+    background-color: white;
+    animation-name: logo-reveal;
+    animation-duration: 3s;
+}
+
+:root {
+    --t1-: (0.7 * 200px);
+    --t2-: (0.5 * 200px);
+    --t3-: (0.3 * 200px);
+    --t4-: (0.15 * 200px);
+    --t1-ml: 1% + 17%;
+    --t2-ml: 1% + 30%;
+    --t3-ml: 1% + 40%;
+    --t4-ml: 1% + 46.5%;
+}
+
+.t-1 {
+    margin-top: calc((200px - var(--t1-))/2 + 1%);
+    margin-left: calc((200px - var(--t1-))/2 + var(--t1-ml));
+    width: calc(var(--t1-));
+    height: calc(var(--t1-));
+    animation-name: logo-reveal-t1;
+}
+
+.t-2 {
+    margin-top: calc((200px - var(--t2-))/2 + 1%);
+    margin-left: calc((200px - var(--t2-))/2 + var(--t2-ml));
+    width: calc(var(--t2-));
+    height: calc(var(--t2-));
+    animation-name: logo-reveal-t2;
+}
+
+
+.t-3 {
+    margin-top: calc((200px - var(--t3-))/2 + 1%);
+    margin-left: calc((200px - var(--t3-))/2 + var(--t3-ml));
+    width: calc(var(--t3-));
+    height: calc(var(--t3-));
+    animation-name: logo-reveal-t3;
+}
+
+.t-4 {
+    margin-top: calc((200px - var(--t4-))/2 + 1%);
+    margin-left: calc((200px - var(--t4-))/2 + var(--t4-ml));
+    width: calc(var(--t4-));
+    height: calc(var(--t4-));
+    animation-name: logo-reveal-t4;
+}

@@ -1,17 +1,24 @@
 import React from "react";
 import MenuLink from "../Menu/menulinks";
-import "../styles/navbar.css";
+import "./navbar.css";
+import Routes from "../../routes";
+import { Col } from "reactstrap";
+import { withRouter } from "react-router-dom";
 
 const Navbar = (props) => {
+    const {pathname} = props.location;
     return(
-        <div className="navbar">
-            <div className="freebar"></div>
-            <MenuLink name={"homepage"} active={true}/>
-            <MenuLink name={"about"}/>
-            <MenuLink name={"resume"}/>
-            <MenuLink name={"blog"}/>
-        </div>
+        <>
+            <Col lg="9" md="7"></Col>
+            <Col lg="3" md="5" style={{display: "flex", justifyContent: "space-around"}}>
+                {Routes.map((value, id) => {
+                    return(
+                        <MenuLink key={id} active={pathname == value.route} name={value.text} link={value.route}/>
+                    )
+                })}
+            </Col>
+        </>
     );
 }
 
-export default Navbar;
+export default withRouter(Navbar);
