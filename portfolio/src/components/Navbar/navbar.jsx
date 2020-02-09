@@ -13,7 +13,7 @@ const Navbar = (props) => {
             <Col lg="3" md="5" style={{display: "flex", justifyContent: "space-around"}}>
                 {Routes.map((value, id) => {
                     return(
-                        <MenuLink key={id} active={pathname == value.route} name={value.text} link={value.route}/>
+                        <MenuLink key={id} active={pathname === value.route} name={value.text} link={value.route}/>
                     )
                 })}
             </Col>
