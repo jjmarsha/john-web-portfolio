@@ -1,10 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Routes from './routes';
 import Navbar from "./components/Navbar/navbar";
-import { Container, Row, Col } from "reactstrap";
+import { Row, Col } from "reactstrap";
 import LogoHeader from "./components/LogoHeader";
 
 

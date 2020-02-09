@@ -1,9 +1,6 @@
 import React from "react";
 import "./homepage.css";
-import ReactTypingEffect from "react-typing-effect";
 import Page from "./page";
-
-const name = "John Marshall";
 
 export default class Homepage extends React.Component {
     render() {
