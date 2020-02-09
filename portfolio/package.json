@@ -7,6 +7,7 @@
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
     "morgan": "^1.9.1",
+    "nodemon": "^2.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
@@ -16,9 +17,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build:dev": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:prod": "react-scripts build; nodemon server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
