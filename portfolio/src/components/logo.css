@@ -1,3 +1,14 @@
+/* :root {
+    --t1-: 0.7 * 200px;
+    --t2-: 0.5 * 200px;
+    --t3-: 0.3 * 200px;
+    --t4-: 0.15 * 200px;
+    --t1-ml: 1% + 17%;
+    --t2-ml: 1% + 30%;
+    --t3-ml: 1% + 40%;
+    --t4-ml: 1% + 46.5%;
+} */
+
 .bar {
     position: absolute;
 }
@@ -121,46 +132,35 @@
     animation-duration: 3s;
 }
 
-:root {
-    --t1-: (0.7 * 200px);
-    --t2-: (0.5 * 200px);
-    --t3-: (0.3 * 200px);
-    --t4-: (0.15 * 200px);
-    --t1-ml: 1% + 17%;
-    --t2-ml: 1% + 30%;
-    --t3-ml: 1% + 40%;
-    --t4-ml: 1% + 46.5%;
-}
-
 .t-1 {
-    margin-top: calc((200px - var(--t1-))/2 + 1%);
-    margin-left: calc((200px - var(--t1-))/2 + var(--t1-ml));
-    width: calc(var(--t1-));
-    height: calc(var(--t1-));
+    margin-top: calc((200px - 0.7 * 200px)/2 + 1%);
+    margin-left: calc((200px - 0.7 * 200px)/2 + 1% + 17%);
+    width: calc(0.7 * 200px);
+    height: calc(0.7 * 200px);
     animation-name: logo-reveal-t1;
 }
 
 .t-2 {
-    margin-top: calc((200px - var(--t2-))/2 + 1%);
-    margin-left: calc((200px - var(--t2-))/2 + var(--t2-ml));
-    width: calc(var(--t2-));
-    height: calc(var(--t2-));
+    margin-top: calc((200px - 0.5 * 200px)/2 + 1%);
+    margin-left: calc((200px - 0.5 * 200px)/2 + 1% + 30%);
+    width: calc(0.5 * 200px);
+    height: calc(0.5 * 200px);
     animation-name: logo-reveal-t2;
 }
 
 
 .t-3 {
-    margin-top: calc((200px - var(--t3-))/2 + 1%);
-    margin-left: calc((200px - var(--t3-))/2 + var(--t3-ml));
-    width: calc(var(--t3-));
-    height: calc(var(--t3-));
+    margin-top: calc((200px - 0.3 * 200px)/2 + 1%);
+    margin-left: calc((200px - 0.3 * 200px)/2 + 1% + 40%);
+    width: calc(0.3 * 200px);
+    height: calc(0.3 * 200px);
     animation-name: logo-reveal-t3;
 }
 
 .t-4 {
-    margin-top: calc((200px - var(--t4-))/2 + 1%);
-    margin-left: calc((200px - var(--t4-))/2 + var(--t4-ml));
-    width: calc(var(--t4-));
-    height: calc(var(--t4-));
+    margin-top: calc((200px - 0.15 * 200px)/2 + 1%);
+    margin-left: calc((200px - 0.15 * 200px)/2 + 1% + 46.5%);
+    width: calc(0.15 * 200px);
+    height: calc(0.15 * 200px);
     animation-name: logo-reveal-t4;
 }
