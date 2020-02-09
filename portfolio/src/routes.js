@@ -1,5 +1,6 @@
 import React from "react";
 
+import Resume from "./static/jjmarsha20201.pdf";
 const Homepage = React.lazy(() => import("pages/homepage"));
 
 const Routes = [
@@ -18,6 +19,7 @@ const Routes = [
     {
         text: "RESUME",
         route: "/resume",
+        doc: Resume,
         exact: true,
         component: Homepage,
     },

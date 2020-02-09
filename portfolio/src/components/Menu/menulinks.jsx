@@ -10,7 +10,10 @@ const linkStyle = {
 const MenuLink = (props) => {
     return(
         <div className={"menulink" + (props.active ? " active" : "")}>
-            <NavLink style={linkStyle} to={props.link}>{props.name}</NavLink>
+            {
+                props.doc ? <a href={props.doc} target="_blank">{props.name}</a> :
+                <NavLink style={linkStyle} to={props.link}>{props.name}</NavLink>
+            }
         </div>
     )
 }
