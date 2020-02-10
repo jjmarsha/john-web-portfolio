@@ -1,9 +1,19 @@
 const express = require("express");
-const app = express();
 const path = require('path');
 const bodyParse = require("body-parser");
 const morgan = require("morgan");
 const customDomainReroute = require('@turinggroup/serverless-express-custom-domain-middleware').customDomainReroute
+
+//Https and http setup
+var fs = require('fs');
+var http = require('http');
+var https = require('https');
+const credentials = {
+  key: fs.readFileSync('./key.pem'),
+  cert: fs.readFileSync('./cert.pem'),
+};
+
+const app = express();
 
 //MiddleWare
 app.use(bodyParse.urlencoded({ extended: true }));
@@ -33,5 +43,9 @@ app.get('/*', (req, res) => {
 })
 
 
-const port = process.env.PORT || 80;
-app.listen(port, "0.0.0.0", () => console.log("Running Server at " + port));
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials, app);
+
+const port = process.env.PORT || 3000;
+httpServer.listen(port, () => console.log("Running http Server at " + port));
+httpsServer.listen(port, () => console.log("Running https Server at " + port));
