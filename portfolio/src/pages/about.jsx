@@ -1,10 +1,9 @@
 import React from "react";
-import "./homepage.css";
 import Page from "./page";
 import Frame from "components/frame";
 import TextFrame from "components/textframe";
 
-export default class Homepage extends React.Component {
+class About extends React.Component {
     render() {
         return(
             <Page>
@@ -15,9 +14,12 @@ export default class Homepage extends React.Component {
                     display: "flex",
                     justifyContent: "center"
                 }}>
-                    Page Coming Soon
+                    <Frame/>
+                    <TextFrame/>
                 </div>
             </Page>
         )
     }
 }
+
+export default About;

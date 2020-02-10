@@ -5,6 +5,7 @@ import Routes from './routes';
 import Navbar from "./components/Navbar/navbar";
 import { Row, Col } from "reactstrap";
 import LogoHeader from "./components/LogoHeader";
+import Loading from "pages/loading";
 
 
 const App = () => {
@@ -20,15 +21,15 @@ const App = () => {
             <Navbar/>
           </Row>
           <Row>
-          <Switch>
-            {Routes.map((value, key) => {
-              return (
-                <React.Suspense fallback={<div></div>}>
-                    <Route path={value.route} component={value.component}/>
-                </React.Suspense>
-              )
-            })}
-          </Switch>
+          <React.Suspense fallback={Loading}>
+            <Switch>
+              {Routes.map((value, key) => {
+                return (
+                  <Route key={key} exact={value.exact} path={value.route} component={value.component}/>
+                )
+              })}
+            </Switch>
+          </React.Suspense>
           </Row>
       </BrowserRouter>
     </div>

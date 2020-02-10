@@ -2,6 +2,7 @@ import React from "react";
 
 import Resume from "./static/jjmarsha20201.pdf";
 const Homepage = React.lazy(() => import("pages/homepage"));
+const About = React.lazy(() => import("pages/about.jsx"));
 
 const Routes = [
     {
@@ -13,20 +14,19 @@ const Routes = [
     {
         text: "ABOUT",
         route: "/about",
-        exact: true,
-        component: Homepage,
+        exact: false,
+        component: About,
     },
     {
         text: "RESUME",
         route: "/resume",
         doc: Resume,
-        exact: true,
-        component: Homepage,
+        exact: false,
     },
     {
         text: "BLOG",
         route: "/blog",
-        exact: true,
+        exact: false,
         component: Homepage,
     }
 ] 

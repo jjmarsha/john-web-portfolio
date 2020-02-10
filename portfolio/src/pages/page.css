@@ -1,12 +1,13 @@
 .page {
-    margin-top: 8%;
+    margin-top: 0%;
+    min-height: 80%;
 }
 
 
 .footer i {
-    margin-top: 20%;
     margin-left: 20px;
-    margin-bottom: 4%;;
+    margin-bottom: 4%;
+    margin-top: 1%;
     font-size: 2em;
     opacity: 0.4;
     color: black;

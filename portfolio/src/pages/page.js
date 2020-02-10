@@ -10,13 +10,13 @@ const Page = (props) => {
             </div>
             <div className="footer">
                 <a href="https://www.linkedin.com/in/john-marshall-60113412a/">
-                    <i class="fab fa-linkedin"/>
+                    <i className="fab fa-linkedin"/>
                 </a>
                 <a href="https://github.com/jjmarsha">
-                    <i class="fab fa-github-square"></i>
+                    <i className="fab fa-github-square"></i>
                 </a>
                 <a href="mailto:jjmarsha@usc.edu">
-                    <i class="fas fa-envelope-square"></i>
+                    <i className="fas fa-envelope-square"></i>
                 </a>
             </div>
         </Col>

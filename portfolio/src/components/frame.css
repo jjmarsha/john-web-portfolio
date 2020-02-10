@@ -1,0 +1,52 @@
+.frame {
+    border: 2px solid;
+    border-image: linear-gradient(-45deg, grey, white, white, grey) 100 100;
+    margin: auto;
+}
+
+.frame img {
+    padding: 40px;
+}
+
+.f-container {
+    position: static;
+    padding-left: 40px; 
+    padding-right: 40px; 
+    display: inline-block;
+}
+
+.textframe {
+    width: 600px;
+    max-height: 550px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-align: left;
+}
+
+.textframe-overlay {
+    position: absolute;
+    width: inherit;
+    height: 550px;
+    z-index: 2;
+
+}
+
+.overlay-row {
+    height: 50px;
+    animation-name: overlay-reveal;
+    background-color: white;
+    opacity: 0;
+} 
+
+@keyframes overlay-reveal {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.textframe p {
+    font-size: 18px;
+}
