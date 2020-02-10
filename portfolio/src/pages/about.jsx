@@ -3,6 +3,13 @@ import Page from "./page";
 import Frame from "components/frame";
 import TextFrame from "components/textframe";
 
+//Use this method to insert dynamic text
+
+// <Text>{`
+// Hi~
+// this is a test message.
+// `}</Text>
+
 class About extends React.Component {
     render() {
         return(
@@ -12,7 +19,8 @@ class About extends React.Component {
                     color: "rgb(54, 54, 54)",
                     marginTop: "10%",
                     display: "flex",
-                    justifyContent: "center"
+                    justifyContent: "center",
+                    flexWrap: "wrap"
                 }}>
                     <Frame/>
                     <TextFrame/>
