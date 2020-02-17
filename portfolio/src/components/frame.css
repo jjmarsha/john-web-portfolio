@@ -21,6 +21,7 @@
     padding-left: 60px;
     padding-right: 60px;
     text-align: left;
+    z-index: -1;
 }
 
 .textframe-overlay {
@@ -35,14 +36,17 @@
     animation-name: overlay-reveal;
     background-color: white;
     opacity: 0;
+    z-index: -1;
 } 
 
 @keyframes overlay-reveal {
     from {
         opacity: 1;
+        z-index: 3;
     }
     to {
         opacity: 0;
+        z-index: -1;
     }
 }
 

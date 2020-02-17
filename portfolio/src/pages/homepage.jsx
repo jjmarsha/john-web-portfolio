@@ -12,10 +12,16 @@ export default class Homepage extends React.Component {
                     fontSize: "40px",
                     color: "rgb(54, 54, 54)",
                     marginTop: "10%",
-                    display: "flex",
                     justifyContent: "center"
                 }}>
-                    Page Coming Soon
+                    <p>
+                        Page Coming Soon
+                    </p>
+                    <div style={{fontSize: "15px", width: "400px", margin: "auto"}}>
+                        To job recruiters: Sorry, this website is currently a work in
+                        progress, but my <b>Resume, Github, and LinkedIn</b> are linked for you
+                        as well as my <b>About</b> page.
+                    </div>
                 </div>
             </Page>
         )

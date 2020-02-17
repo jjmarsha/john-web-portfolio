@@ -18,6 +18,12 @@ const Routes = [
         component: About,
     },
     {
+        text: "PROJECTS",
+        route: "/projects",
+        exact: false,
+        component: Homepage,
+    },
+    {
         text: "RESUME",
         route: "/resume",
         doc: Resume,
@@ -28,7 +34,7 @@ const Routes = [
         route: "/blog",
         exact: false,
         component: Homepage,
-    }
+    },
 ] 
 
 export default Routes;
