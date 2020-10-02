@@ -1,74 +1,73 @@
 .frame {
-    border: 2px solid;
-    border-image: linear-gradient(-45deg, grey, white, white, grey) 100 100;
-    margin: auto;
+  border: 2px solid;
+  border-image: linear-gradient(-45deg, grey, white, white, grey) 100 100;
+  margin: auto;
 }
 
-
 .frame img {
-    padding: 40px;
+  padding: 40px;
 }
 
 .f-container {
-    position: static;
-    padding-left: 40px; 
-    padding-right: 40px; 
-    display: inline-block;
+  position: static;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: inline-block;
 }
 
 .textframe {
-    width: 600px;
-    padding-left: 60px;
-    padding-right: 60px;
-    text-align: left;
-    z-index: -1;
+  width: 600px;
+  padding-left: 60px;
+  padding-right: 60px;
+  text-align: left;
+  z-index: -1;
 }
 
 .textframe-overlay {
-    position: absolute;
-    width: inherit;
-    height: 550px;
-    z-index: 2;
+  position: absolute;
+  width: inherit;
+  height: 550px;
+  z-index: 2;
 }
 
 .overlay-row {
-    height: 50px;
-    animation-name: overlay-reveal;
-    background-color: white;
-    opacity: 0;
-    z-index: -1;
-} 
+  height: 50px;
+  animation-name: overlay-reveal;
+  background-color: white;
+  opacity: 0;
+  z-index: -1;
+}
 
 @keyframes overlay-reveal {
-    from {
-        opacity: 1;
-        z-index: 3;
-    }
-    to {
-        opacity: 0;
-        z-index: -1;
-    }
+  from {
+    opacity: 1;
+    z-index: 3;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
 }
 
 .textframe p {
-    font-size: 18px;
+  font-size: 18px;
 }
 
 @media (max-width: 650px) {
-    .textframe-overlay {
-        display: none;
-    }
+  .textframe-overlay {
+    display: none;
+  }
 
-    .textframe {
-        height: auto;
-    }
+  .textframe {
+    height: auto;
+  }
 
-    .frame {
-        /* border-image: none; */
-        border: none;
-    }
+  .frame {
+    /* border-image: none; */
+    border: none;
+  }
 
-    .frame img {
-        padding-top: 0px;
-    }
+  .frame img {
+    padding-top: 0px;
+  }
 }

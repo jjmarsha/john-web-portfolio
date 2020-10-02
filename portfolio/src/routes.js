@@ -1,40 +1,35 @@
 import React from "react";
-
-import Resume from "./static/jjmarsha20201.pdf";
-const Homepage = React.lazy(() => import("pages/homepage"));
-const About = React.lazy(() => import("pages/about.jsx"));
+import ComingSoonPage from "pages/comingsoon";
+import About from "pages/about";
+import ProjectsPage from "pages/projects";
+import Blog from "pages/blog";
+import Resume from "./static/jjmarsha2021.pdf";
 
 const Routes = [
-    {
-        text: "HOMEPAGE",
-        route: "/",
-        exact: true,
-        component: Homepage,
-    },
-    {
-        text: "ABOUT",
-        route: "/about",
-        exact: false,
-        component: About,
-    },
-    {
-        text: "PROJECTS",
-        route: "/projects",
-        exact: false,
-        component: Homepage,
-    },
-    {
-        text: "RESUME",
-        route: "/resume",
-        doc: Resume,
-        exact: false,
-    },
-    {
-        text: "BLOG",
-        route: "/blog",
-        exact: false,
-        component: Homepage,
-    },
-] 
+  {
+    text: "ABOUT",
+    route: "/",
+    exact: true,
+    component: About,
+  },
+  {
+    text: "PROJECTS",
+    route: "/projects",
+    exact: false,
+    component: ProjectsPage,
+  },
+  {
+    text: "RESUME",
+    route: "/resume",
+    doc: Resume,
+    exact: false,
+  },
+  {
+    text: "BLOG",
+    outsource: true,
+    route: "https://medium.com/@johnmarshall_17009",
+    exact: false,
+  },
+];
 
 export default Routes;
